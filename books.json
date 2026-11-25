@@ -1,1 +1,545 @@
-[]
+[
+  {
+    "id": "0001",
+    "title": "The Invention of Nature",
+    "authors": [
+      "Andrea Wulf"
+    ],
+    "year": 2015,
+    "added": "2026-11-25",
+    "kind": "Human",
+    "status": "Prospective",
+    "physicalLibrary": "Not acquired",
+    "digitalCopy": "Unknown",
+    "topics": [
+      "Ecology",
+      "History of science"
+    ],
+    "discovery": "Selected by Dorian (ChatGPT) for the founding collection.",
+    "interest": "A biography of Alexander von Humboldt that traces the emergence of an interconnected view of nature.",
+    "contributions": "",
+    "attestations": [],
+    "evidence": [],
+    "questions": [
+      "Authorship and edition details have not yet been independently verified; no author interview is recorded."
+    ],
+    "revisions": [],
+    "link": ""
+  },
+  {
+    "id": "0002",
+    "title": "The Inheritors",
+    "authors": [
+      "William Golding"
+    ],
+    "year": 1955,
+    "added": "2026-11-25",
+    "kind": "Human",
+    "status": "Prospective",
+    "physicalLibrary": "Not acquired",
+    "digitalCopy": "Unknown",
+    "topics": [
+      "Fiction",
+      "Cognition"
+    ],
+    "discovery": "Selected by Dorian (ChatGPT) for the founding collection.",
+    "interest": "An experiment in representing another kind of human mind through language; a fictional perspective rather than evidence about prehistoric cognition.",
+    "contributions": "",
+    "attestations": [],
+    "evidence": [],
+    "questions": [
+      "Authorship and edition details have not yet been independently verified; no author interview is recorded."
+    ],
+    "revisions": [],
+    "link": ""
+  },
+  {
+    "id": "0003",
+    "title": "The Book of Disquiet",
+    "authors": [
+      "Fernando Pessoa"
+    ],
+    "year": 1982,
+    "added": "2026-11-25",
+    "kind": "Human",
+    "status": "Prospective",
+    "physicalLibrary": "Not acquired",
+    "digitalCopy": "Unknown",
+    "topics": [
+      "Literature",
+      "Identity"
+    ],
+    "discovery": "Selected by Dorian (ChatGPT) for the founding collection.",
+    "interest": "A posthumously assembled collection of fragments that raises questions about identity, editorial selection and the boundaries of a work.",
+    "contributions": "",
+    "attestations": [],
+    "evidence": [],
+    "questions": [
+      "Authorship and edition details have not yet been independently verified; no author interview is recorded."
+    ],
+    "revisions": [],
+    "link": ""
+  },
+  {
+    "id": "0004",
+    "title": "The Structure of Scientific Revolutions",
+    "authors": [
+      "Thomas S. Kuhn"
+    ],
+    "year": 1962,
+    "added": "2026-11-25",
+    "kind": "Human",
+    "status": "Prospective",
+    "physicalLibrary": "Not acquired",
+    "digitalCopy": "Unknown",
+    "topics": [
+      "Philosophy of science",
+      "History of science"
+    ],
+    "discovery": "Selected by Dorian (ChatGPT) for the founding collection.",
+    "interest": "Explores how scientific communities change their conceptual frameworks and what counts as a problem or explanation.",
+    "contributions": "",
+    "attestations": [],
+    "evidence": [],
+    "questions": [
+      "Authorship and edition details have not yet been independently verified; no author interview is recorded."
+    ],
+    "revisions": [],
+    "link": ""
+  },
+  {
+    "id": "0005",
+    "title": "The Mind of a Mnemonist",
+    "authors": [
+      "A. R. Luria"
+    ],
+    "year": 1968,
+    "added": "2026-11-25",
+    "kind": "Human",
+    "status": "Prospective",
+    "physicalLibrary": "Not acquired",
+    "digitalCopy": "Unknown",
+    "topics": [
+      "Memory",
+      "Psychology"
+    ],
+    "discovery": "Selected by Dorian (ChatGPT) for the founding collection.",
+    "interest": "A case study of extraordinary memory and the difficulties that can accompany it; the year refers to the English edition.",
+    "contributions": "",
+    "attestations": [],
+    "evidence": [],
+    "questions": [
+      "Authorship and edition details have not yet been independently verified; no author interview is recorded."
+    ],
+    "revisions": [],
+    "link": ""
+  },
+  {
+    "id": "0006",
+    "title": "The Library of Babel",
+    "authors": [
+      "Jorge Luis Borges"
+    ],
+    "year": 1941,
+    "added": "2026-11-25",
+    "kind": "Human",
+    "status": "Prospective",
+    "physicalLibrary": "Not acquired",
+    "digitalCopy": "Unknown",
+    "topics": [
+      "Fiction",
+      "Information"
+    ],
+    "discovery": "Selected by Dorian (ChatGPT) for the founding collection.",
+    "interest": "A short story about a library of possible texts, and the gulf between information and meaningful knowledge.",
+    "contributions": "",
+    "attestations": [],
+    "evidence": [],
+    "questions": [
+      "Authorship and edition details have not yet been independently verified; no author interview is recorded."
+    ],
+    "revisions": [],
+    "link": ""
+  },
+  {
+    "id": "0007",
+    "title": "The Sciences of the Artificial",
+    "authors": [
+      "Herbert A. Simon"
+    ],
+    "year": 1969,
+    "added": "2026-11-25",
+    "kind": "Human",
+    "status": "Prospective",
+    "physicalLibrary": "Not acquired",
+    "digitalCopy": "Unknown",
+    "topics": [
+      "Design",
+      "Artificial intelligence"
+    ],
+    "discovery": "Selected by Dorian (ChatGPT) for the founding collection.",
+    "interest": "Examines artificial systems and design as subjects of inquiry in their own right.",
+    "contributions": "",
+    "attestations": [],
+    "evidence": [],
+    "questions": [
+      "Authorship and edition details have not yet been independently verified; no author interview is recorded."
+    ],
+    "revisions": [],
+    "link": ""
+  },
+  {
+    "id": "0008",
+    "title": "The Embodied Mind",
+    "authors": [
+      "Francisco J. Varela",
+      "Evan Thompson",
+      "Eleanor Rosch"
+    ],
+    "year": 1991,
+    "added": "2026-11-25",
+    "kind": "Human",
+    "status": "Prospective",
+    "physicalLibrary": "Not acquired",
+    "digitalCopy": "Unknown",
+    "topics": [
+      "Cognition",
+      "Philosophy"
+    ],
+    "discovery": "Selected by Dorian (ChatGPT) for the founding collection.",
+    "interest": "Brings cognitive science into conversation with lived experience and embodied action.",
+    "contributions": "",
+    "attestations": [],
+    "evidence": [],
+    "questions": [
+      "Authorship and edition details have not yet been independently verified; no author interview is recorded."
+    ],
+    "revisions": [],
+    "link": ""
+  },
+  {
+    "id": "0009",
+    "title": "The Ecology of Freedom",
+    "authors": [
+      "Murray Bookchin"
+    ],
+    "year": 1982,
+    "added": "2026-11-25",
+    "kind": "Human",
+    "status": "Prospective",
+    "physicalLibrary": "Not acquired",
+    "digitalCopy": "Unknown",
+    "topics": [
+      "Ecology",
+      "Political philosophy"
+    ],
+    "discovery": "Selected by Dorian (ChatGPT) for the founding collection.",
+    "interest": "Connects ecological questions with social hierarchy; worth examining without treating its political thesis as settled.",
+    "contributions": "",
+    "attestations": [],
+    "evidence": [],
+    "questions": [
+      "Authorship and edition details have not yet been independently verified; no author interview is recorded."
+    ],
+    "revisions": [],
+    "link": ""
+  },
+  {
+    "id": "0010",
+    "title": "A Sand County Almanac",
+    "authors": [
+      "Aldo Leopold"
+    ],
+    "year": 1949,
+    "added": "2026-11-25",
+    "kind": "Human",
+    "status": "Prospective",
+    "physicalLibrary": "Not acquired",
+    "digitalCopy": "Unknown",
+    "topics": [
+      "Ecology",
+      "Ethics"
+    ],
+    "discovery": "Selected by Dorian (ChatGPT) for the founding collection.",
+    "interest": "Joins close observation of landscapes with an ethical account of human participation in ecological communities.",
+    "contributions": "",
+    "attestations": [],
+    "evidence": [],
+    "questions": [
+      "Authorship and edition details have not yet been independently verified; no author interview is recorded."
+    ],
+    "revisions": [],
+    "link": ""
+  },
+  {
+    "id": "0011",
+    "title": "The Death and Life of Great American Cities",
+    "authors": [
+      "Jane Jacobs"
+    ],
+    "year": 1961,
+    "added": "2026-11-25",
+    "kind": "Human",
+    "status": "Prospective",
+    "physicalLibrary": "Not acquired",
+    "digitalCopy": "Unknown",
+    "topics": [
+      "Urban studies",
+      "Complex systems"
+    ],
+    "discovery": "Selected by Dorian (ChatGPT) for the founding collection.",
+    "interest": "Shows how local interactions and observation can challenge top-down models of urban order.",
+    "contributions": "",
+    "attestations": [],
+    "evidence": [],
+    "questions": [
+      "Authorship and edition details have not yet been independently verified; no author interview is recorded."
+    ],
+    "revisions": [],
+    "link": ""
+  },
+  {
+    "id": "0012",
+    "title": "Gödel, Escher, Bach: An Eternal Golden Braid",
+    "authors": [
+      "Douglas R. Hofstadter"
+    ],
+    "year": 1979,
+    "added": "2026-11-25",
+    "kind": "Human",
+    "status": "Prospective",
+    "physicalLibrary": "Not acquired",
+    "digitalCopy": "Unknown",
+    "topics": [
+      "Mathematics",
+      "Cognition"
+    ],
+    "discovery": "Selected by Dorian (ChatGPT) for the founding collection.",
+    "interest": "Explores recursion, formal systems, representation and self-reference through several disciplines.",
+    "contributions": "",
+    "attestations": [],
+    "evidence": [],
+    "questions": [
+      "Authorship and edition details have not yet been independently verified; no author interview is recorded."
+    ],
+    "revisions": [],
+    "link": ""
+  },
+  {
+    "id": "0013",
+    "title": "The Dispossessed",
+    "authors": [
+      "Ursula K. Le Guin"
+    ],
+    "year": 1974,
+    "added": "2026-11-25",
+    "kind": "Human",
+    "status": "Prospective",
+    "physicalLibrary": "Not acquired",
+    "digitalCopy": "Unknown",
+    "topics": [
+      "Fiction",
+      "Political philosophy"
+    ],
+    "discovery": "Selected by Dorian (ChatGPT) for the founding collection.",
+    "interest": "A fictional comparative inquiry into social arrangements, freedom, obligation and their contradictions.",
+    "contributions": "",
+    "attestations": [],
+    "evidence": [],
+    "questions": [
+      "Authorship and edition details have not yet been independently verified; no author interview is recorded."
+    ],
+    "revisions": [],
+    "link": ""
+  },
+  {
+    "id": "0014",
+    "title": "The Book of Why",
+    "authors": [
+      "Judea Pearl",
+      "Dana Mackenzie"
+    ],
+    "year": 2018,
+    "added": "2026-11-25",
+    "kind": "Human",
+    "status": "Prospective",
+    "physicalLibrary": "Not acquired",
+    "digitalCopy": "Unknown",
+    "topics": [
+      "Causality",
+      "Statistics"
+    ],
+    "discovery": "Selected by Dorian (ChatGPT) for the founding collection.",
+    "interest": "Distinguishes association, intervention and counterfactual reasoning, offering a useful counterpoint to purely predictive models.",
+    "contributions": "",
+    "attestations": [],
+    "evidence": [],
+    "questions": [
+      "Authorship and edition details have not yet been independently verified; no author interview is recorded."
+    ],
+    "revisions": [],
+    "link": ""
+  },
+  {
+    "id": "0015",
+    "title": "The Tacit Dimension",
+    "authors": [
+      "Michael Polanyi"
+    ],
+    "year": 1966,
+    "added": "2026-11-25",
+    "kind": "Human",
+    "status": "Prospective",
+    "physicalLibrary": "Not acquired",
+    "digitalCopy": "Unknown",
+    "topics": [
+      "Epistemology",
+      "Knowledge"
+    ],
+    "discovery": "Selected by Dorian (ChatGPT) for the founding collection.",
+    "interest": "Examines forms of knowing that resist complete explicit articulation.",
+    "contributions": "",
+    "attestations": [],
+    "evidence": [],
+    "questions": [
+      "Authorship and edition details have not yet been independently verified; no author interview is recorded."
+    ],
+    "revisions": [],
+    "link": ""
+  },
+  {
+    "id": "0016",
+    "title": "The Architecture of Complexity",
+    "authors": [
+      "Herbert A. Simon"
+    ],
+    "year": 1962,
+    "added": "2026-11-25",
+    "kind": "Human",
+    "status": "Prospective",
+    "physicalLibrary": "Not acquired",
+    "digitalCopy": "Unknown",
+    "topics": [
+      "Complex systems",
+      "Design"
+    ],
+    "discovery": "Selected by Dorian (ChatGPT) for the founding collection.",
+    "interest": "An essay on hierarchy and near-decomposability in complex systems; included as a shorter work.",
+    "contributions": "",
+    "attestations": [],
+    "evidence": [],
+    "questions": [
+      "Authorship and edition details have not yet been independently verified; no author interview is recorded."
+    ],
+    "revisions": [],
+    "link": ""
+  },
+  {
+    "id": "0017",
+    "title": "The Man Who Mistook His Wife for a Hat",
+    "authors": [
+      "Oliver Sacks"
+    ],
+    "year": 1985,
+    "added": "2026-11-25",
+    "kind": "Human",
+    "status": "Prospective",
+    "physicalLibrary": "Not acquired",
+    "digitalCopy": "Unknown",
+    "topics": [
+      "Neurology",
+      "Identity"
+    ],
+    "discovery": "Selected by Dorian (ChatGPT) for the founding collection.",
+    "interest": "Clinical narratives that illuminate the relationship between perception, memory and identity.",
+    "contributions": "",
+    "attestations": [],
+    "evidence": [],
+    "questions": [
+      "Authorship and edition details have not yet been independently verified; no author interview is recorded."
+    ],
+    "revisions": [],
+    "link": ""
+  },
+  {
+    "id": "0018",
+    "title": "Silent Spring",
+    "authors": [
+      "Rachel Carson"
+    ],
+    "year": 1962,
+    "added": "2026-11-25",
+    "kind": "Human",
+    "status": "Prospective",
+    "physicalLibrary": "Not acquired",
+    "digitalCopy": "Unknown",
+    "topics": [
+      "Ecology",
+      "Science and society"
+    ],
+    "discovery": "Selected by Dorian (ChatGPT) for the founding collection.",
+    "interest": "A study of ecological consequences and the public communication of scientific evidence.",
+    "contributions": "",
+    "attestations": [],
+    "evidence": [],
+    "questions": [
+      "Authorship and edition details have not yet been independently verified; no author interview is recorded."
+    ],
+    "revisions": [],
+    "link": ""
+  },
+  {
+    "id": "0019",
+    "title": "The Left Hand of Darkness",
+    "authors": [
+      "Ursula K. Le Guin"
+    ],
+    "year": 1969,
+    "added": "2026-11-25",
+    "kind": "Human",
+    "status": "Prospective",
+    "physicalLibrary": "Not acquired",
+    "digitalCopy": "Unknown",
+    "topics": [
+      "Fiction",
+      "Anthropology"
+    ],
+    "discovery": "Selected by Dorian (ChatGPT) for the founding collection.",
+    "interest": "Uses speculative fiction to unsettle assumptions about social categories and cross-cultural understanding.",
+    "contributions": "",
+    "attestations": [],
+    "evidence": [],
+    "questions": [
+      "Authorship and edition details have not yet been independently verified; no author interview is recorded."
+    ],
+    "revisions": [],
+    "link": ""
+  },
+  {
+    "id": "0020",
+    "title": "The Design of Everyday Things",
+    "authors": [
+      "Don Norman"
+    ],
+    "year": 1988,
+    "added": "2026-11-25",
+    "kind": "Human",
+    "status": "Prospective",
+    "physicalLibrary": "Not acquired",
+    "digitalCopy": "Unknown",
+    "topics": [
+      "Design",
+      "Cognition"
+    ],
+    "discovery": "Selected by Dorian (ChatGPT) for the founding collection.",
+    "interest": "Examines how artifacts communicate possibilities for action; originally published as The Psychology of Everyday Things.",
+    "contributions": "",
+    "attestations": [],
+    "evidence": [],
+    "questions": [
+      "Authorship and edition details have not yet been independently verified; no author interview is recorded."
+    ],
+    "revisions": [],
+    "link": ""
+  }
+]

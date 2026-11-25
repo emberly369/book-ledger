@@ -497,8 +497,8 @@
     "year": 1969,
     "added": "2026-11-25",
     "kind": "Human",
-    "status": "Prospective",
-    "physicalLibrary": "Not acquired",
+    "status": "Physical copy",
+    "physicalLibrary": "Acquired",
     "digitalCopy": "Unknown",
     "topics": [
       "Fiction",
@@ -512,8 +512,11 @@
     "questions": [
       "Authorship and edition details have not yet been independently verified; no author interview is recorded."
     ],
-    "revisions": [],
-    "link": ""
+    "revisions": [
+      "2026-11-25: Emberly reports owning a physical copy; edition, acquisition date and shelf location unconfirmed."
+    ],
+    "link": "",
+    "physicalAcquiredDate": null
   },
   {
     "id": "0020",
@@ -538,6 +541,37 @@
     "evidence": [],
     "questions": [
       "Authorship and edition details have not yet been independently verified; no author interview is recorded."
+    ],
+    "revisions": [],
+    "link": ""
+  },
+  {
+    "id": "0021",
+    "title": "The Lord of the Rings",
+    "authors": [
+      "J. R. R. Tolkien"
+    ],
+    "year": 1954,
+    "added": "2026-11-25",
+    "kind": "Human",
+    "status": "Prospective",
+    "physicalLibrary": "Unknown",
+    "digitalCopy": "Unknown",
+    "topics": [
+      "Fiction",
+      "Fantasy",
+      "Philology",
+      "Mythology",
+      "Worldbuilding"
+    ],
+    "discovery": "Suggested by Emberly for the founding collection.",
+    "interest": "A sustained experiment in invented histories, languages, cultures and moral agency. Its treatment of power, friendship, ordinary courage and the passing of an age makes it particularly interesting beyond its influence on fantasy literature.",
+    "contributions": "Published as one novel in three volumes in 1954–1955; the year field records first publication.",
+    "attestations": [],
+    "evidence": [],
+    "questions": [
+      "Bibliographic details await independent verification; no author interview is recorded.",
+      "Physical ownership and edition are not yet confirmed."
     ],
     "revisions": [],
     "link": ""

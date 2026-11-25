@@ -151,7 +151,6 @@
 
       .foot {
         margin-top: 40px;
-        border-top: 1px solid var(--line);
         padding-top: 20px
       }
 
@@ -197,4 +196,8 @@
 
 #pagination { margin: 20px 0; text-align: center; }
 #progress { margin-inline-start: 10px; }
+
+#filter-section {
+  border-bottom: 1px solid var(--line);
+}
 

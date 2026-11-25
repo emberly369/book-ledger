@@ -198,13 +198,3 @@
 #pagination { margin: 20px 0; text-align: center; }
 #progress { margin-inline-start: 10px; }
 
-/* Keep the controls outside the independently scrolling ledger. */
-#ledger-scroll {
-  max-height: 65vh;
-  max-height: 65dvh;
-  overflow-y: auto;
-  scrollbar-gutter: stable;
-  padding-inline: 2px 14px;
-  border-block: 1px solid var(--line);
-}
-#ledger-scroll .entry { scroll-margin-top: 8px; }

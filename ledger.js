@@ -35,7 +35,7 @@ function revealRecord(id, focus = false) {
   const index = visibleRows.findIndex(b => b.id === id);
   while (index >= rendered && rendered < visibleRows.length) appendBatch();
   const target = document.getElementById('entry-' + id);
-  if (target) { const pane = $('ledger-scroll'); pane.scrollTop += target.getBoundingClientRect().top - pane.getBoundingClientRect().top - pane.clientTop - 8; if (focus) target.focus({preventScroll:true}); }
+  if (target) { target.scrollIntoView(); if (focus) target.focus({preventScroll:true}); }
 }
 function followHash() {
   if (!loaded || !location.hash.startsWith('#entry-')) return;
@@ -66,7 +66,6 @@ function relationships(a,b) {
         let s = $('sort').value;
         rows.sort((a, b) => s === 'title' ? a.title.localeCompare(b.title) : s === 'author' ? (a.authors || []).join(', ').localeCompare((b.authors || []).join(', ')) : s === 'year' ? (a.year ?? Infinity) - (b.year ?? Infinity) : (b.added || '').localeCompare(a.added || ''));
         $('count').textContent = `${rows.filter(b=>recordType(b)!=='Collection').length} of ${books.filter(b=>recordType(b)!=='Collection').length} works · ${rows.filter(b=>recordType(b)==='Collection').length} of ${books.filter(b=>recordType(b)==='Collection').length} collections`;
-        $('ledger-scroll').scrollTop = 0;
         $('results').replaceChildren();
         visibleRows = rows; rendered = 0;
         observer?.unobserve($('pagination'));
@@ -132,7 +131,7 @@ function relationships(a,b) {
       if ('IntersectionObserver' in window) {
         observer = new IntersectionObserver(entries => {
           if (entries.some(e => e.isIntersecting) && rendered < visibleRows.length) appendBatch();
-        }, {root: $('ledger-scroll'), rootMargin: '180px 0px'});
+        }, {rootMargin: '250px 0px'});
       }
       window.addEventListener('hashchange', followHash);
       load();

@@ -197,7 +197,8 @@
 #pagination { margin: 20px 0; text-align: center; }
 #progress { margin-inline-start: 10px; }
 
-#filter-section {
+#search-section {
   border-bottom: 1px solid var(--line);
+  padding-bottom: 16px;
 }
 

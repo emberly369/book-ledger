@@ -67,7 +67,7 @@ let loaded = false;
       for (const id of ['q', 'kind', 'status', 'topic', 'sort']) $(id).addEventListener(id === 'q' ? 'input' : 'change', render);
       $('reset').addEventListener('click', () => {
         for (const id of ['q', 'kind', 'status', 'topic']) $(id).value = '';
-        $('sort').value = 'recent';
+        $('sort').value = 'title';
         render()
       });
       load();

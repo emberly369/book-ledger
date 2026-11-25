@@ -21,7 +21,7 @@ let loaded = false;
       function render() {
         if (!loaded) return;
         const q = $('q').value.toLowerCase().trim();
-        let rows = books.filter(b => (!q || JSON.stringify(b).toLowerCase().includes(q)) && (!$('kind').value || b.kind === $('kind').value) && (!$('status').value || b.status === $('status').value) && (!$('topic').value || (b.topics || []).includes($('topic').value)));
+        let rows = books.filter(b => (!q || JSON.stringify(b).toLowerCase().includes(q)) && (!$('kind').value || b.kind === $('kind').value) && (!$('status').value || (b.physicalLibrary || (b.status === 'Physical copy' ? 'Acquired' : 'Unknown')) === $('status').value) && (!$('topic').value || (b.topics || []).includes($('topic').value)));
         let s = $('sort').value;
         rows.sort((a, b) => s === 'title' ? a.title.localeCompare(b.title) : s === 'author' ? (a.authors || []).join(', ').localeCompare((b.authors || []).join(', ')) : s === 'year' ? (a.year ?? Infinity) - (b.year ?? Infinity) : (b.added || '').localeCompare(a.added || ''));
         $('count').textContent = `${rows.length} of ${books.length} works`;
@@ -35,7 +35,9 @@ let loaded = false;
         for (const b of rows) {
           const a = el('article', null, 'entry');
           a.append(el('div', `Entry ${b.id||'—'} · Added ${b.added||'unknown'}`, 'meta'), el('h3', b.title), el('p', `${(b.authors||[]).join(', ')||'Authorship unknown'}${b.year?' · '+b.year:''}`));
-          for (const t of [b.kind, b.status, ...(b.topics || [])].filter(Boolean)) a.append(el('span', t, 'tag'));
+          for (const t of [b.kind, ...(b.topics || [])].filter(Boolean)) a.append(el('span', t, 'tag'));
+          field(a, 'Physical library', b.physicalLibrary || (b.status === 'Physical copy' ? 'Acquired' : 'Unknown'));
+          field(a, 'Digital copy', b.digitalCopy || (b.status === 'Digital copy' ? 'Available' : 'Unknown'));
           field(a, 'Why it caught our attention', b.interest);
           const d = el('details');
           d.append(el('summary', 'Provenance and archival record'));

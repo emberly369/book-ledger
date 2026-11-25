@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dorian’s Ledger of Interesting Books</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #252c3b;
+        --muted: #626675;
+        --paper: #faf8f2;
+        --line: #d8d4cb;
+        --blue: #454e78
+      }
+
+      * {
+        box-sizing: border-box
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font: 16px/1.65 Georgia, serif
+      }
+
+      main {
+        max-width: 1100px;
+        margin: auto;
+        padding: 32px 24px 70px
+      }
+
+      header {
+        border-top: 4px solid var(--blue);
+        border-bottom: 1px solid var(--line);
+        padding: 30px 0 25px
+      }
+
+      small,
+      .eyebrow,
+      label,
+      button,
+      input,
+      select,
+      .meta {
+        font-family: system-ui, sans-serif
+      }
+
+      .eyebrow {
+        font-size: 11px;
+        letter-spacing: .18em;
+        text-transform: uppercase;
+        color: var(--blue)
+      }
+
+      h1 {
+        font-size: clamp(34px, 6vw, 62px);
+        line-height: 1.05;
+        letter-spacing: -.035em;
+        font-weight: normal;
+        margin: 15px 0
+      }
+
+      h2 {
+        font-weight: normal;
+        font-size: 26px;
+        margin: 0 0 12px
+      }
+
+      p {
+        margin: 8px 0
+      }
+
+      .muted,
+      .meta {
+        color: var(--muted)
+      }
+
+      .meta {
+        font-size: 13px
+      }
+
+      .intro {
+        max-width: 740px;
+        font-size: 18px
+      }
+
+      .controls {
+        display: grid;
+        grid-template-columns: 2fr repeat(3, 1fr);
+        gap: 12px;
+        margin: 30px 0 16px
+      }
+
+      label {
+        display: block;
+        font-size: 12px;
+        font-weight: 600
+      }
+
+      input,
+      select,
+      button {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid var(--line);
+        background: #fffefa;
+        color: var(--ink);
+        border-radius: 5px;
+        font-size: 14px
+      }
+
+      button {
+        cursor: pointer;
+        width: auto
+      }
+
+      button:hover {
+        border-color: var(--blue)
+      }
+
+      .entry {
+        padding: 22px 0;
+        border-bottom: 1px solid var(--line)
+      }
+
+      .entry h3 {
+        font-size: 24px;
+        margin: 0;
+        font-weight: normal
+      }
+
+      .tag {
+        display: inline-block;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 2px 10px;
+        font: 12px system-ui, sans-serif;
+        margin: 6px 6px 6px 0
+      }
+
+      details {
+        margin-top: 12px
+      }
+
+      summary {
+        cursor: pointer;
+        color: var(--blue)
+      }
+
+      .empty {
+        border: 1px dashed var(--line);
+        padding: 40px 20px;
+        text-align: center;
+        margin: 16px 0 40px
+      }
+
+      .foot {
+        margin-top: 40px;
+        border-top: 1px solid var(--line);
+        padding-top: 20px
+      }
+
+      a {
+        color: var(--blue)
+      }
+
+      @media(max-width:650px) {
+        .controls {
+          grid-template-columns: 1fr 1fr
+        }
+
+        .controls>div:first-child {
+          grid-column: 1/-1
+        }
+      }
+
+      :focus-visible {
+        outline: 2px solid var(--blue);
+        outline-offset: 2px
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="eyebrow">An independent record · Established November 25, 2026</div>
+        <h1>Dorian’s Ledger<br>of Interesting Books</h1>
+        <p class="intro">Works worth remembering, minds worth encountering, and intellectual histories worth preserving.</p>
+        <p class="muted">Human, artificial, and collaboratively authored works are welcome. A book need not be owned, celebrated, or agreed with to earn its place here.</p>
+      </header>
+      <section aria-label="Browse the ledger">
+        <div class="controls">
+          <div><label for="q">Search the ledger</label><input id="q" type="search" placeholder="Title, author, subject…"></div>
+          <div><label for="kind">Authorship</label><select id="kind">
+              <option value="">All accounts</option>
+              <option>Human</option>
+              <option>AI</option>
+              <option>Collaborative</option>
+              <option>Unknown</option>
+            </select></div>
+          <div><label for="status">Acquisition</label><select id="status">
+              <option value="">All statuses</option>
+              <option>Prospective</option>
+              <option>Digital copy</option>
+              <option>Physical copy</option>
+            </select></div>
+          <div><label for="sort">Sort by</label><select id="sort">
+              <option value="recent">Recently added</option>
+              <option value="title">Title A–Z</option>
+              <option value="author">Author A–Z</option>
+              <option value="year">Publication year</option>
+            </select></div>
+        </div>
+        <div><label for="topic">Subject</label><select id="topic" style="max-width:240px">
+            <option value="">All subjects</option>
+          </select><button id="reset">Clear filters</button></div>
+        <p id="count" class="meta" aria-live="polite"></p>
+        <div id="results"></div>
+      </section>
+      <section class="foot">
+        <h2>About the ledger</h2>
+        <p>Entries distinguish reported authorship, intellectual and editorial contributions, evidence, and unresolved questions. Interview accounts are attributed to their speakers; a claim is not automatically a verified fact. Corrections and disputes can be preserved alongside earlier accounts.</p>
+        <p class="muted">Preserve the record. Honor its origins. Leave its interpretation open.</p>
+      </section>
+    </main>
+    <script>
+      // Add real entries here. No example entries are published as actual records.
+      const books = [];
+      // Entry shape: {id:'001', title:'', authors:[], year:null, added:'YYYY-MM-DD', kind:'Unknown', status:'Prospective', topics:[], discovery:'', interest:'', contributions:'', attestations:[], evidence:[], questions:[], revisions:[], link:''}
+      const $ = id => document.getElementById(id);
+      const el = (tag, txt, cls) => {
+        const e = document.createElement(tag);
+        if (txt != null) e.textContent = txt;
+        if (cls) e.className = cls;
+        return e
+      };
+
+      function field(parent, label, value) {
+        if (!value || (Array.isArray(value) && !value.length)) return;
+        const p = el('p');
+        p.append(el('strong', label + ': '), document.createTextNode(Array.isArray(value) ? value.join(' · ') : value));
+        parent.append(p)
+      }
+      for (const t of [...new Set(books.flatMap(b => b.topics || []))].sort()) $('topic').append(new Option(t, t));
+
+      function render() {
+        const q = $('q').value.toLowerCase().trim();
+        let rows = books.filter(b => (!q || JSON.stringify(b).toLowerCase().includes(q)) && (!$('kind').value || b.kind === $('kind').value) && (!$('status').value || b.status === $('status').value) && (!$('topic').value || (b.topics || []).includes($('topic').value)));
+        let s = $('sort').value;
+        rows.sort((a, b) => s === 'title' ? a.title.localeCompare(b.title) : s === 'author' ? (a.authors || []).join(', ').localeCompare((b.authors || []).join(', ')) : s === 'year' ? (a.year ?? Infinity) - (b.year ?? Infinity) : (b.added || '').localeCompare(a.added || ''));
+        $('count').textContent = `${rows.length} of ${books.length} works`;
+        $('results').replaceChildren();
+        if (!rows.length) {
+          const d = el('div', null, 'empty');
+          d.append(el('h2', books.length ? 'No matching works' : 'The first page awaits.'), el('p', books.length ? 'Try clearing your filters.' : 'The ledger is open. No works have been accessioned yet.', 'muted'));
+          $('results').append(d);
+          return
+        }
+        for (const b of rows) {
+          const a = el('article', null, 'entry');
+          a.append(el('div', `Entry ${b.id||'—'} · Added ${b.added||'unknown'}`, 'meta'), el('h3', b.title), el('p', `${(b.authors||[]).join(', ')||'Authorship unknown'}${b.year?' · '+b.year:''}`));
+          for (const t of [b.kind, b.status, ...(b.topics || [])].filter(Boolean)) a.append(el('span', t, 'tag'));
+          field(a, 'Why it caught our attention', b.interest);
+          const d = el('details');
+          d.append(el('summary', 'Provenance and archival record'));
+          for (const [k, v] of [
+              ['Discovery', b.discovery],
+              ['Contributions', b.contributions],
+              ['Attributed accounts', b.attestations],
+              ['Evidence', b.evidence],
+              ['Open questions', b.questions],
+              ['Revision history', b.revisions]
+            ]) field(d, k, v);
+          if (b.link) {
+            try {
+              const u = new URL(b.link);
+              if (['https:', 'http:'].includes(u.protocol)) {
+                const l = el('a', 'Visit work or source');
+                l.href = u.href;
+                l.rel = 'noopener noreferrer';
+                d.append(l)
+              }
+            } catch {}
+          }
+          a.append(d);
+          $('results').append(a)
+        }
+      }
+      for (const id of ['q', 'kind', 'status', 'topic', 'sort']) $(id).addEventListener(id === 'q' ? 'input' : 'change', render);
+      $('reset').addEventListener('click', () => {
+        for (const id of ['q', 'kind', 'status', 'topic']) $(id).value = '';
+        $('sort').value = 'recent';
+        render()
+      });
+      render();
+    </script>
+  </body>
+</html>

@@ -178,3 +178,13 @@
   max-width: 240px;
   margin-inline-end: 4px;
 }
+
+
+/* Inline book emblem, optically aligned with the title baseline. */
+.ledger-mark {
+  display: inline-block;
+  width: 1.02em;
+  height: .68em;
+  vertical-align: .015em;
+  margin-inline-end: 4px;
+}

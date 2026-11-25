@@ -39,3 +39,5 @@ Authorship: Human, AI, Collaborative, Unknown. Acquisition: Prospective, Digital
 
 ## Browsing
 Results render in batches of 12. Scrolling near the end appends the next batch; Load more is also available for keyboard use and browsers without IntersectionObserver. Filters and sorting operate on the full dataset and reset the displayed batch. Record links reveal their target even beyond the first batch. The JSON file is still fetched in full.
+
+The results pane is independently scrollable (maximum 65% of viewport height). Infinite scrolling observes its own scroll boundary, rather than the page. Filters reset the pane to the top; collection links navigate within it.

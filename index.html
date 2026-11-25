@@ -41,8 +41,10 @@
             <option value="">All subjects</option>
           </select><label for="type">Record type</label><select id="type"><option value="">All types</option></select><button id="reset">Clear filters</button></div>
         <p id="count" class="meta" aria-live="polite">Loading ledger…</p><noscript>JavaScript is required to browse the ledger. <a href="books.json">View the raw records.</a></noscript>
-        <div id="results"></div>
-        <div id="pagination" hidden><button id="more" type="button">Load more</button><span id="progress" class="meta" aria-live="polite"></span></div>
+        <div id="ledger-scroll" role="region" aria-label="Book results" tabindex="0">
+          <div id="results"></div>
+          <div id="pagination" hidden><button id="more" type="button">Load more</button><span id="progress" class="meta" aria-live="polite"></span></div>
+        </div>
       </section>
       <section class="foot">
         <h2>About the ledger</h2>

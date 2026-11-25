@@ -28,7 +28,44 @@ function parentsOf(b) { return memberships(b).map(m => books.find(p => p.id === 
 function membersOf(b) { return books.filter(x => memberships(x).some(m => m.id === b.id)).sort((a,c) => (memberships(a).find(m=>m.id===b.id).sequence ?? Infinity) - (memberships(c).find(m=>m.id===b.id).sequence ?? Infinity) || a.title.localeCompare(c.title)); }
 function normalize(s) { return String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase(); }
 function matches(b,q) { const hay = normalize(JSON.stringify(b) + ' ' + parentsOf(b).map(p=>p.title).join(' ')); return normalize(q).split(/\s+/).every(term=>hay.includes(term)); }
-function resetFilters() { for(const id of ['q','kind','status','topic','type']) $(id).value=''; $('sort').value='title'; }
+
+function editionsOf(b) { return Array.isArray(b.editions) ? b.editions : []; }
+function originalYears(b) {
+  if (!Number.isInteger(b.year)) return [];
+  const end = Number.isInteger(b.yearEnd) && b.yearEnd >= b.year && b.yearEnd - b.year <= 1000 ? b.yearEnd : b.year;
+  return Array.from({length:end-b.year+1}, (_,i)=>b.year+i);
+}
+function editionYear(e) {
+  if (Number.isInteger(e.year)) return e.year;
+  const m = typeof e.date === 'string' && e.date.match(/^(\d{4})(?:-|$)/);
+  return m ? Number(m[1]) : null;
+}
+function publicationYears(b, scope='any') {
+  const original = scope === 'edition' ? [] : originalYears(b);
+  const editions = scope === 'original' ? [] : editionsOf(b).map(editionYear).filter(y=>y!==null);
+  return [...new Set([...original,...editions])];
+}
+function matchesPublication(b, year, scope) {
+  if (year) return publicationYears(b,scope).includes(Number(year));
+  return scope === 'edition' ? editionsOf(b).length > 0 : scope === 'original' ? originalYears(b).length > 0 : true;
+}
+function publicationHistory(a,b) {
+  const editions = editionsOf(b).slice().sort((x,y)=>(editionYear(x)??Infinity)-(editionYear(y)??Infinity)||String(x.date||'').localeCompare(String(y.date||'')));
+  const d = el('details',null,'publication-history');
+  d.append(el('summary','Editions and printings ('+editions.length+')'));
+  if (b.year) field(d,'Original publication',String(b.year)+(b.yearEnd?'–'+b.yearEnd:''));
+  if (!editions.length) d.append(el('p','No edition or printing details recorded.','meta'));
+  for (const e of editions) {
+    const item=el('div',null,'edition-record');
+    const date=e.date||String(editionYear(e)??'Date unknown');
+    item.append(el('h4',date+' · '+(e.type||'Publication')));
+    for(const [label,value] of [['Edition',e.edition],['Impression',e.impression],['Publisher',e.publisher],['Language',e.language],['Translator',e.translator],['ISBN',e.isbn],['Physical library',e.physicalLibrary],['Digital copy',e.digitalCopy],['Changes',e.changes],['Evidence',e.evidence],['Notes',e.notes]]) field(item,label,value == null ? null : Array.isArray(value)?value:String(value));
+    d.append(item);
+  }
+  a.append(d);
+}
+
+function resetFilters() { for(const id of ['q','kind','status','topic','type','publication-year']) $(id).value=''; $('year-scope').value='any'; $('sort').value='title'; }
 function revealRecord(id, focus = false) {
   if (!books.some(b => b.id === id)) return;
   if (!visibleRows.some(b => b.id === id)) { resetFilters(); render(); }
@@ -62,7 +99,7 @@ function relationships(a,b) {
       function render() {
         if (!loaded) return;
         const q = $('q').value.toLowerCase().trim();
-        let rows = books.filter(b => (!q || matches(b,q)) && (!$('type').value || recordType(b) === $('type').value) && (!$('kind').value || b.kind === $('kind').value) && (!$('status').value || (b.physicalLibrary || (b.status === 'Physical copy' ? 'Acquired' : 'Unknown')) === $('status').value) && (!$('topic').value || (b.topics || []).includes($('topic').value)));
+        let rows = books.filter(b => (!q || matches(b,q)) && matchesPublication(b,$('publication-year').value,$('year-scope').value) && (!$('type').value || recordType(b) === $('type').value) && (!$('kind').value || b.kind === $('kind').value) && (!$('status').value || (b.physicalLibrary || (b.status === 'Physical copy' ? 'Acquired' : 'Unknown')) === $('status').value) && (!$('topic').value || (b.topics || []).includes($('topic').value)));
         let s = $('sort').value;
         rows.sort((a, b) => s === 'title' ? a.title.localeCompare(b.title) : s === 'author' ? (a.authors || []).join(', ').localeCompare((b.authors || []).join(', ')) : s === 'year' ? (a.year ?? Infinity) - (b.year ?? Infinity) : (b.added || '').localeCompare(a.added || ''));
         $('count').textContent = `${rows.filter(b=>recordType(b)!=='Collection').length} of ${books.filter(b=>recordType(b)!=='Collection').length} works · ${rows.filter(b=>recordType(b)==='Collection').length} of ${books.filter(b=>recordType(b)==='Collection').length} collections`;
@@ -88,6 +125,7 @@ function relationships(a,b) {
           for (const t of [recordType(b), b.kind, ...(b.topics || [])].filter(Boolean)) a.append(el('span', t, 'tag'));
           if(b.description) a.append(el('p',b.description,'entry-description'));
           relationships(a,b);
+          publicationHistory(a,b);
           field(a, 'Physical library', b.physicalLibrary || (b.status === 'Physical copy' ? 'Acquired' : 'Unknown'));
           field(a, 'Digital copy', b.digitalCopy || (b.status === 'Digital copy' ? 'Available' : 'Unknown'));
           field(a, 'Why it caught our attention', b.interest);
@@ -122,7 +160,7 @@ function relationships(a,b) {
         observer?.unobserve($('pagination'));
         if (hasMore) observer?.observe($('pagination'));
       }
-      for (const id of ['q', 'kind', 'status', 'topic', 'type', 'sort']) $(id).addEventListener(id === 'q' ? 'input' : 'change', render);
+      for (const id of ['q', 'kind', 'status', 'topic', 'type', 'sort', 'publication-year', 'year-scope']) $(id).addEventListener(id === 'q' ? 'input' : 'change', render);
       $('reset').addEventListener('click', () => {
         resetFilters();
         render()
@@ -144,6 +182,7 @@ async function load() {
     if (!Array.isArray(books)) throw new Error('Invalid ledger data');
     for (const t of [...new Set(books.flatMap(b => b.topics || []))].sort()) $('topic').append(new Option(t, t));
     for(const t of [...new Set(books.map(recordType))].sort()) $('type').append(new Option(t,t));
+    for (const y of [...new Set(books.flatMap(b=>publicationYears(b)))].sort((a,b)=>b-a)) $('publication-year').append(new Option(String(y),String(y)));
     loaded = true;
     render();
     followHash();

@@ -1,6 +1,9 @@
 // Add real entries here. No example entries are published as actual records.
       let books = [];
 let loaded = false;
+const PAGE_SIZE = 12;
+let visibleRows = [], rendered = 0;
+let observer;
       // Entry shape: {id:'001', title:'', authors:[], year:null, added:'YYYY-MM-DD', kind:'Unknown', status:'Prospective', topics:[], discovery:'', interest:'', contributions:'', attestations:[], evidence:[], questions:[], revisions:[], link:''}
       const $ = id => document.getElementById(id);
       const el = (tag, txt, cls) => {
@@ -26,7 +29,29 @@ function membersOf(b) { return books.filter(x => memberships(x).some(m => m.id =
 function normalize(s) { return String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase(); }
 function matches(b,q) { const hay = normalize(JSON.stringify(b) + ' ' + parentsOf(b).map(p=>p.title).join(' ')); return normalize(q).split(/\s+/).every(term=>hay.includes(term)); }
 function resetFilters() { for(const id of ['q','kind','status','topic','type']) $(id).value=''; $('sort').value='title'; }
-function recordLink(b) { const a=el('a',b.title); a.href='#entry-'+encodeURIComponent(b.id); a.addEventListener('click',e=>{e.preventDefault(); if(!document.getElementById('entry-'+b.id)){resetFilters();render();} const target=document.getElementById('entry-'+b.id); if(target){location.hash='entry-'+encodeURIComponent(b.id);target.scrollIntoView();target.focus({preventScroll:true});}});return a; }
+function revealRecord(id, focus = false) {
+  if (!books.some(b => b.id === id)) return;
+  if (!visibleRows.some(b => b.id === id)) { resetFilters(); render(); }
+  const index = visibleRows.findIndex(b => b.id === id);
+  while (index >= rendered && rendered < visibleRows.length) appendBatch();
+  const target = document.getElementById('entry-' + id);
+  if (target) { target.scrollIntoView(); if (focus) target.focus({preventScroll:true}); }
+}
+function followHash() {
+  if (!loaded || !location.hash.startsWith('#entry-')) return;
+  try { revealRecord(decodeURIComponent(location.hash.slice(7))); } catch {}
+}
+function recordLink(b) {
+  const a = el('a', b.title);
+  a.href = '#entry-' + encodeURIComponent(b.id);
+  a.addEventListener('click', e => {
+    if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
+    location.hash = 'entry-' + encodeURIComponent(b.id);
+    revealRecord(b.id, true);
+  });
+  return a;
+}
 function relationships(a,b) {
   const parents=parentsOf(b);
   if(parents.length){const p=el('p',null,'relationships meta');p.append(document.createTextNode('Part of: '));parents.forEach((parent,i)=>{if(i)p.append(document.createTextNode(' · '));p.append(recordLink(parent));const n=memberships(b).find(m=>m.id===parent.id).sequence;if(n!=null)p.append(document.createTextNode(' · '+n));});a.append(p);}
@@ -42,13 +67,21 @@ function relationships(a,b) {
         rows.sort((a, b) => s === 'title' ? a.title.localeCompare(b.title) : s === 'author' ? (a.authors || []).join(', ').localeCompare((b.authors || []).join(', ')) : s === 'year' ? (a.year ?? Infinity) - (b.year ?? Infinity) : (b.added || '').localeCompare(a.added || ''));
         $('count').textContent = `${rows.filter(b=>recordType(b)!=='Collection').length} of ${books.filter(b=>recordType(b)!=='Collection').length} works · ${rows.filter(b=>recordType(b)==='Collection').length} of ${books.filter(b=>recordType(b)==='Collection').length} collections`;
         $('results').replaceChildren();
+        visibleRows = rows; rendered = 0;
+        observer?.unobserve($('pagination'));
+        $('pagination').hidden = true;
         if (!rows.length) {
           const d = el('div', null, 'empty');
           d.append(el('h2', books.length ? 'No matching works' : 'The first page awaits.'), el('p', books.length ? 'Try clearing your filters.' : 'The ledger is open. No works have been accessioned yet.', 'muted'));
           $('results').append(d);
           return
         }
-        for (const b of rows) {
+        appendBatch();
+      }
+
+      function appendBatch() {
+        const end = Math.min(rendered + PAGE_SIZE, visibleRows.length);
+        for (const b of visibleRows.slice(rendered, end)) {
           const a = el('article', null, 'entry');
           a.id='entry-'+b.id; a.tabIndex=-1;
           a.append(el('div', `Entry ${b.id||'—'} · Added ${b.added||'unknown'}`, 'meta'), el('h3', b.title), el('p', `${(b.authors||[]).join(', ')||'Authorship unknown'}${b.year?' · '+b.year+(b.yearEnd?'–'+b.yearEnd:''):''}`));
@@ -82,12 +115,25 @@ function relationships(a,b) {
           a.append(d);
           $('results').append(a)
         }
+        rendered = end;
+        const hasMore = rendered < visibleRows.length;
+        $('pagination').hidden = !hasMore;
+        $('progress').textContent = rendered + ' of ' + visibleRows.length + ' shown';
+        observer?.unobserve($('pagination'));
+        if (hasMore) observer?.observe($('pagination'));
       }
       for (const id of ['q', 'kind', 'status', 'topic', 'type', 'sort']) $(id).addEventListener(id === 'q' ? 'input' : 'change', render);
       $('reset').addEventListener('click', () => {
         resetFilters();
         render()
       });
+      $('more').addEventListener('click', appendBatch);
+      if ('IntersectionObserver' in window) {
+        observer = new IntersectionObserver(entries => {
+          if (entries.some(e => e.isIntersecting) && rendered < visibleRows.length) appendBatch();
+        }, {rootMargin: '250px 0px'});
+      }
+      window.addEventListener('hashchange', followHash);
       load();
 
 async function load() {
@@ -100,7 +146,7 @@ async function load() {
     for(const t of [...new Set(books.map(recordType))].sort()) $('type').append(new Option(t,t));
     loaded = true;
     render();
-    if(location.hash.startsWith('#entry-')) document.getElementById(decodeURIComponent(location.hash.slice(1)))?.scrollIntoView();
+    followHash();
   } catch (error) {
     $('count').textContent = 'Unable to load the ledger.';
     $('results').replaceChildren(el('p', 'Please reload or serve this site over HTTP.', 'empty'));

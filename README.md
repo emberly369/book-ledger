@@ -36,3 +36,6 @@ Authorship: Human, AI, Collaborative, Unknown. Acquisition: Prospective, Digital
 
 ## Collections and descriptions
 `description` summarizes the work independently of `interest` (why it was selected). `type` is Book, Collection, Volume, Essay, Short story, or another explicit record type; missing type defaults to Book. `yearEnd` optionally gives the end of a publication span. A constituent record has `collections: [{"id":"0021","sequence":1}]`; multiple memberships are supported. IDs are stable and point to existing records. Search includes each record's own contents and direct parent titles; type, subject, authorship and physical-library filters apply to the record itself. Collection details list all direct members, including those outside current filters; following a hidden member clears filters. Counts separate collection records from other works. Acquisition is independently recorded, never inherited. No nested collection traversal is implied.
+
+## Browsing
+Results render in batches of 12. Scrolling near the end appends the next batch; Load more is also available for keyboard use and browsers without IntersectionObserver. Filters and sorting operate on the full dataset and reset the displayed batch. Record links reveal their target even beyond the first batch. The JSON file is still fetched in full.

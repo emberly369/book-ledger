@@ -194,3 +194,6 @@
 .relationships { margin: 8px 0; }
 .relationships li { margin: 4px 0; }
 .entry:target { outline: 1px solid var(--blue); outline-offset: 5px; }
+
+#pagination { margin: 20px 0; text-align: center; }
+#progress { margin-inline-start: 10px; }

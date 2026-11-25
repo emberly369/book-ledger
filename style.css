@@ -188,3 +188,9 @@
   vertical-align: .015em;
   margin-inline-end: 4px;
 }
+
+#type { max-width: 240px; margin-inline-end: 4px; }
+.entry-description { max-width: 75ch; }
+.relationships { margin: 8px 0; }
+.relationships li { margin: 4px 0; }
+.entry:target { outline: 1px solid var(--blue); outline-offset: 5px; }

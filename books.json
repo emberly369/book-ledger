@@ -24,7 +24,9 @@
       "Authorship and edition details have not yet been independently verified; no author interview is recorded."
     ],
     "revisions": [],
-    "link": ""
+    "link": "",
+    "description": "A biography of Alexander von Humboldt and his interconnected understanding of nature.",
+    "type": "Book"
   },
   {
     "id": "0002",
@@ -51,7 +53,9 @@
       "Authorship and edition details have not yet been independently verified; no author interview is recorded."
     ],
     "revisions": [],
-    "link": ""
+    "link": "",
+    "description": "A novel following a group of Neanderthals encountering another human population.",
+    "type": "Book"
   },
   {
     "id": "0003",
@@ -78,7 +82,9 @@
       "Authorship and edition details have not yet been independently verified; no author interview is recorded."
     ],
     "revisions": [],
-    "link": ""
+    "link": "",
+    "description": "A posthumously assembled collection of reflective literary fragments.",
+    "type": "Book"
   },
   {
     "id": "0004",
@@ -105,7 +111,9 @@
       "Authorship and edition details have not yet been independently verified; no author interview is recorded."
     ],
     "revisions": [],
-    "link": ""
+    "link": "",
+    "description": "An account of paradigm change in scientific communities.",
+    "type": "Book"
   },
   {
     "id": "0005",
@@ -132,7 +140,9 @@
       "Authorship and edition details have not yet been independently verified; no author interview is recorded."
     ],
     "revisions": [],
-    "link": ""
+    "link": "",
+    "description": "A psychological case study of a man with extraordinary memory.",
+    "type": "Book"
   },
   {
     "id": "0006",
@@ -159,7 +169,9 @@
       "Authorship and edition details have not yet been independently verified; no author interview is recorded."
     ],
     "revisions": [],
-    "link": ""
+    "link": "",
+    "description": "A short story imagining a library containing every possible book within a fixed format.",
+    "type": "Short story"
   },
   {
     "id": "0007",
@@ -186,7 +198,9 @@
       "Authorship and edition details have not yet been independently verified; no author interview is recorded."
     ],
     "revisions": [],
-    "link": ""
+    "link": "",
+    "description": "An examination of design and artificial systems.",
+    "type": "Book"
   },
   {
     "id": "0008",
@@ -215,7 +229,9 @@
       "Authorship and edition details have not yet been independently verified; no author interview is recorded."
     ],
     "revisions": [],
-    "link": ""
+    "link": "",
+    "description": "An account of cognition integrating embodied action, experience and cognitive science.",
+    "type": "Book"
   },
   {
     "id": "0009",
@@ -242,7 +258,9 @@
       "Authorship and edition details have not yet been independently verified; no author interview is recorded."
     ],
     "revisions": [],
-    "link": ""
+    "link": "",
+    "description": "An exploration of ecology, hierarchy and social freedom.",
+    "type": "Book"
   },
   {
     "id": "0010",
@@ -269,7 +287,9 @@
       "Authorship and edition details have not yet been independently verified; no author interview is recorded."
     ],
     "revisions": [],
-    "link": ""
+    "link": "",
+    "description": "Essays on landscapes, wildlife and the land ethic.",
+    "type": "Book"
   },
   {
     "id": "0011",
@@ -296,7 +316,9 @@
       "Authorship and edition details have not yet been independently verified; no author interview is recorded."
     ],
     "revisions": [],
-    "link": ""
+    "link": "",
+    "description": "A critique of urban planning and an account of how city neighborhoods function.",
+    "type": "Book"
   },
   {
     "id": "0012",
@@ -323,7 +345,9 @@
       "Authorship and edition details have not yet been independently verified; no author interview is recorded."
     ],
     "revisions": [],
-    "link": ""
+    "link": "",
+    "description": "An interdisciplinary exploration of recursion, formal systems and self-reference.",
+    "type": "Book"
   },
   {
     "id": "0013",
@@ -350,7 +374,9 @@
       "Authorship and edition details have not yet been independently verified; no author interview is recorded."
     ],
     "revisions": [],
-    "link": ""
+    "link": "",
+    "description": "A speculative novel contrasting two societies and their political arrangements.",
+    "type": "Book"
   },
   {
     "id": "0014",
@@ -378,7 +404,9 @@
       "Authorship and edition details have not yet been independently verified; no author interview is recorded."
     ],
     "revisions": [],
-    "link": ""
+    "link": "",
+    "description": "An introduction to causal inference, intervention and counterfactuals.",
+    "type": "Book"
   },
   {
     "id": "0015",
@@ -405,7 +433,9 @@
       "Authorship and edition details have not yet been independently verified; no author interview is recorded."
     ],
     "revisions": [],
-    "link": ""
+    "link": "",
+    "description": "An inquiry into knowledge that cannot be fully articulated.",
+    "type": "Book"
   },
   {
     "id": "0016",
@@ -432,7 +462,9 @@
       "Authorship and edition details have not yet been independently verified; no author interview is recorded."
     ],
     "revisions": [],
-    "link": ""
+    "link": "",
+    "description": "An essay on hierarchy and near-decomposability in complex systems.",
+    "type": "Essay"
   },
   {
     "id": "0017",
@@ -459,7 +491,9 @@
       "Authorship and edition details have not yet been independently verified; no author interview is recorded."
     ],
     "revisions": [],
-    "link": ""
+    "link": "",
+    "description": "Clinical narratives about neurological conditions and their effects on experience.",
+    "type": "Book"
   },
   {
     "id": "0018",
@@ -486,7 +520,9 @@
       "Authorship and edition details have not yet been independently verified; no author interview is recorded."
     ],
     "revisions": [],
-    "link": ""
+    "link": "",
+    "description": "An examination of pesticide use and its ecological consequences.",
+    "type": "Book"
   },
   {
     "id": "0019",
@@ -516,7 +552,9 @@
       "2026-11-25: Emberly reports owning a physical copy; edition, acquisition date and shelf location unconfirmed."
     ],
     "link": "",
-    "physicalAcquiredDate": null
+    "physicalAcquiredDate": null,
+    "description": "A speculative novel about an envoy encountering a society with unfamiliar gender categories.",
+    "type": "Book"
   },
   {
     "id": "0020",
@@ -543,7 +581,9 @@
       "Authorship and edition details have not yet been independently verified; no author interview is recorded."
     ],
     "revisions": [],
-    "link": ""
+    "link": "",
+    "description": "An account of how design shapes people's interactions with everyday objects.",
+    "type": "Book"
   },
   {
     "id": "0021",
@@ -574,6 +614,102 @@
       "Physical ownership and edition are not yet confirmed."
     ],
     "revisions": [],
-    "link": ""
+    "link": "",
+    "type": "Collection",
+    "description": "A single epic fantasy novel published in three volumes, following the struggle to destroy the One Ring.",
+    "yearEnd": 1955
+  },
+  {
+    "id": "0022",
+    "title": "The Fellowship of the Ring",
+    "authors": [
+      "J. R. R. Tolkien"
+    ],
+    "year": 1954,
+    "added": "2026-11-25",
+    "kind": "Human",
+    "type": "Volume",
+    "collections": [
+      {
+        "id": "0021",
+        "sequence": 1
+      }
+    ],
+    "description": "Frodo leaves the Shire with the One Ring and joins a fellowship formed to carry it toward Mordor.",
+    "physicalLibrary": "Unknown",
+    "digitalCopy": "Unknown",
+    "topics": [
+      "Fiction",
+      "Fantasy",
+      "Philology",
+      "Mythology",
+      "Worldbuilding"
+    ],
+    "discovery": "Catalogued as a constituent volume of The Lord of the Rings.",
+    "questions": [
+      "Edition and physical ownership unconfirmed; no author interview recorded."
+    ]
+  },
+  {
+    "id": "0023",
+    "title": "The Two Towers",
+    "authors": [
+      "J. R. R. Tolkien"
+    ],
+    "year": 1954,
+    "added": "2026-11-25",
+    "kind": "Human",
+    "type": "Volume",
+    "collections": [
+      {
+        "id": "0021",
+        "sequence": 2
+      }
+    ],
+    "description": "The separated fellowship faces war in Rohan while Frodo and Sam continue toward Mordor.",
+    "physicalLibrary": "Unknown",
+    "digitalCopy": "Unknown",
+    "topics": [
+      "Fiction",
+      "Fantasy",
+      "Philology",
+      "Mythology",
+      "Worldbuilding"
+    ],
+    "discovery": "Catalogued as a constituent volume of The Lord of the Rings.",
+    "questions": [
+      "Edition and physical ownership unconfirmed; no author interview recorded."
+    ]
+  },
+  {
+    "id": "0024",
+    "title": "The Return of the King",
+    "authors": [
+      "J. R. R. Tolkien"
+    ],
+    "year": 1955,
+    "added": "2026-11-25",
+    "kind": "Human",
+    "type": "Volume",
+    "collections": [
+      {
+        "id": "0021",
+        "sequence": 3
+      }
+    ],
+    "description": "The struggle against Sauron reaches its conclusion as Frodo and Sam approach Mount Doom.",
+    "physicalLibrary": "Unknown",
+    "digitalCopy": "Unknown",
+    "topics": [
+      "Fiction",
+      "Fantasy",
+      "Philology",
+      "Mythology",
+      "Worldbuilding"
+    ],
+    "discovery": "Catalogued as a constituent volume of The Lord of the Rings.",
+    "questions": [
+      "Edition and physical ownership unconfirmed; no author interview recorded."
+    ]
   }
 ]

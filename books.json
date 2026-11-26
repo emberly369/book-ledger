@@ -711,5 +711,287 @@
     "questions": [
       "Edition and physical ownership unconfirmed; no author interview recorded."
     ]
+  },
+  {
+    "id": "0025",
+    "title": "Leonardo’s Notebooks",
+    "authors": [
+      "Leonardo da Vinci"
+    ],
+    "year": null,
+    "added": "2026-11-25",
+    "type": "Book",
+    "kind": "Human",
+    "status": "Physical copy",
+    "physicalLibrary": "Acquired",
+    "physicalAcquiredDate": null,
+    "digitalCopy": "Unknown",
+    "topics": [
+      "Art",
+      "Anatomy",
+      "Engineering",
+      "Natural philosophy"
+    ],
+    "description": "A selection of Leonardo’s notes and drawings exploring observation, invention and the natural world.",
+    "discovery": "From the founder’s personal collection; title and author confirmed by the founder on November 25, 2026.",
+    "interest": "",
+    "contributions": "",
+    "attestations": [
+      "Founder confirms the title and author of the photographed physical copy."
+    ],
+    "evidence": [],
+    "questions": [
+      "Exact edition, printing date, publisher and any translator or editor of the physical copy remain unconfirmed.",
+      "No author interview recorded."
+    ],
+    "revisions": [],
+    "editions": [],
+    "link": ""
+  },
+  {
+    "id": "0026",
+    "title": "Natural History Essays",
+    "authors": [
+      "Henry David Thoreau"
+    ],
+    "year": null,
+    "added": "2026-11-25",
+    "type": "Book",
+    "kind": "Human",
+    "status": "Physical copy",
+    "physicalLibrary": "Acquired",
+    "physicalAcquiredDate": null,
+    "digitalCopy": "Unknown",
+    "topics": [
+      "Ecology",
+      "Nature",
+      "Philosophy"
+    ],
+    "description": "Collected essays on the natural world and the practice of observing it.",
+    "discovery": "From the founder’s personal collection; title and author confirmed by the founder on November 25, 2026.",
+    "interest": "",
+    "contributions": "",
+    "attestations": [
+      "Founder confirms the title and author of the photographed physical copy."
+    ],
+    "evidence": [],
+    "questions": [
+      "Exact edition, printing date, publisher and any translator or editor of the physical copy remain unconfirmed.",
+      "No author interview recorded."
+    ],
+    "revisions": [],
+    "editions": [],
+    "link": ""
+  },
+  {
+    "id": "0027",
+    "title": "Roughing It",
+    "authors": [
+      "Mark Twain"
+    ],
+    "year": 1872,
+    "added": "2026-11-25",
+    "type": "Book",
+    "kind": "Human",
+    "status": "Physical copy",
+    "physicalLibrary": "Acquired",
+    "physicalAcquiredDate": null,
+    "digitalCopy": "Unknown",
+    "topics": [
+      "Travel",
+      "Humor",
+      "Memoir"
+    ],
+    "description": "A humorous account drawing on Twain’s travels and experiences in the American West and Hawaii.",
+    "discovery": "From the founder’s personal collection; title and author confirmed by the founder on November 25, 2026.",
+    "interest": "",
+    "contributions": "",
+    "attestations": [
+      "Founder confirms the title and author of the photographed physical copy."
+    ],
+    "evidence": [],
+    "questions": [
+      "Exact edition, printing date, publisher and any translator or editor of the physical copy remain unconfirmed.",
+      "No author interview recorded."
+    ],
+    "revisions": [],
+    "editions": [],
+    "link": ""
+  },
+  {
+    "id": "0028",
+    "title": "Wilderness Essays",
+    "authors": [
+      "John Muir"
+    ],
+    "year": null,
+    "added": "2026-11-25",
+    "type": "Book",
+    "kind": "Human",
+    "status": "Physical copy",
+    "physicalLibrary": "Acquired",
+    "physicalAcquiredDate": null,
+    "digitalCopy": "Unknown",
+    "topics": [
+      "Ecology",
+      "Wilderness",
+      "Conservation"
+    ],
+    "description": "Collected essays on wild landscapes, exploration and the natural environment.",
+    "discovery": "From the founder’s personal collection; title and author confirmed by the founder on November 25, 2026.",
+    "interest": "",
+    "contributions": "",
+    "attestations": [
+      "Founder confirms the title and author of the photographed physical copy."
+    ],
+    "evidence": [],
+    "questions": [
+      "Exact edition, printing date, publisher and any translator or editor of the physical copy remain unconfirmed.",
+      "No author interview recorded."
+    ],
+    "revisions": [],
+    "editions": [],
+    "link": ""
+  },
+  {
+    "id": "0029",
+    "title": "Crime and Punishment",
+    "authors": [
+      "Fyodor Dostoyevsky"
+    ],
+    "year": 1866,
+    "added": "2026-11-25",
+    "type": "Book",
+    "kind": "Human",
+    "status": "Physical copy",
+    "physicalLibrary": "Acquired",
+    "physicalAcquiredDate": null,
+    "digitalCopy": "Unknown",
+    "topics": [
+      "Fiction",
+      "Psychology",
+      "Ethics"
+    ],
+    "description": "A novel examining guilt, moral reasoning and the consequences of a young man's crime.",
+    "discovery": "From the founder’s personal collection; title and author confirmed by the founder on November 25, 2026.",
+    "interest": "",
+    "contributions": "",
+    "attestations": [
+      "Founder confirms the title and author of the photographed physical copy."
+    ],
+    "evidence": [],
+    "questions": [
+      "Exact edition, printing date, publisher and any translator or editor of the physical copy remain unconfirmed.",
+      "No author interview recorded."
+    ],
+    "revisions": [],
+    "editions": [],
+    "link": ""
+  },
+  {
+    "id": "0030",
+    "title": "Lord of the Flies",
+    "authors": [
+      "William Golding"
+    ],
+    "year": 1954,
+    "added": "2026-11-25",
+    "type": "Book",
+    "kind": "Human",
+    "status": "Physical copy",
+    "physicalLibrary": "Acquired",
+    "physicalAcquiredDate": null,
+    "digitalCopy": "Unknown",
+    "topics": [
+      "Fiction",
+      "Society",
+      "Human nature"
+    ],
+    "description": "A novel about boys stranded on an island and the social order they attempt to establish.",
+    "discovery": "From the founder’s personal collection; title and author confirmed by the founder on November 25, 2026.",
+    "interest": "",
+    "contributions": "",
+    "attestations": [
+      "Founder confirms the title and author of the photographed physical copy."
+    ],
+    "evidence": [],
+    "questions": [
+      "Exact edition, printing date, publisher and any translator or editor of the physical copy remain unconfirmed.",
+      "No author interview recorded."
+    ],
+    "revisions": [],
+    "editions": [],
+    "link": ""
+  },
+  {
+    "id": "0031",
+    "title": "One Day in the Life of Ivan Denisovich",
+    "authors": [
+      "Alexander Solzhenitsyn"
+    ],
+    "year": 1962,
+    "added": "2026-11-25",
+    "type": "Book",
+    "kind": "Human",
+    "status": "Physical copy",
+    "physicalLibrary": "Acquired",
+    "physicalAcquiredDate": null,
+    "digitalCopy": "Unknown",
+    "topics": [
+      "Fiction",
+      "History",
+      "Human dignity"
+    ],
+    "description": "A narrative of one day in the life of a prisoner in a Soviet labor camp.",
+    "discovery": "From the founder’s personal collection; title and author confirmed by the founder on November 25, 2026.",
+    "interest": "",
+    "contributions": "",
+    "attestations": [
+      "Founder confirms the title and author of the photographed physical copy."
+    ],
+    "evidence": [],
+    "questions": [
+      "Exact edition, printing date, publisher and any translator or editor of the physical copy remain unconfirmed.",
+      "No author interview recorded."
+    ],
+    "revisions": [],
+    "editions": [],
+    "link": ""
+  },
+  {
+    "id": "0032",
+    "title": "Funny in Farsi",
+    "authors": [
+      "Firoozeh Dumas"
+    ],
+    "year": 2003,
+    "added": "2026-11-25",
+    "type": "Book",
+    "kind": "Human",
+    "status": "Physical copy",
+    "physicalLibrary": "Acquired",
+    "physicalAcquiredDate": null,
+    "digitalCopy": "Unknown",
+    "topics": [
+      "Memoir",
+      "Culture",
+      "Immigration",
+      "Humor"
+    ],
+    "description": "A humorous memoir of growing up Iranian in America and navigating cultural differences.",
+    "discovery": "From the founder’s personal collection; title and author confirmed by the founder on November 25, 2026.",
+    "interest": "",
+    "contributions": "",
+    "attestations": [
+      "Founder confirms the title and author of the photographed physical copy."
+    ],
+    "evidence": [],
+    "questions": [
+      "Exact edition, printing date, publisher and any translator or editor of the physical copy remain unconfirmed.",
+      "No author interview recorded."
+    ],
+    "revisions": [],
+    "editions": [],
+    "link": ""
   }
 ]
